@@ -8,20 +8,20 @@ def caesar(plaintext, offset):
     for ch in plaintext:
         # to shift uppercase letters
         if ord(ch) >= 65:
-            ch = ord(ch) % offset
+            ch = ord(ch) + offset
             ch = chr(ch)
             #to keep in the range of uppercase letters
             while ord(ch) > 90:
-                ch = ord(ch) - 26
-                print ch
+                ch = ord(ch) + 26
+                ch = chr(ch)
         # to shift lowercase letters
         if ord(ch) >= 97 and ord(ch) <= 122:
-            ch = ord(ch) % offset
+            ch = ord(ch) + offset
             ch = chr(ch)
             #to keep in the range of lowercase letters
             if ord(ch) > 122:
-                ch = ord(ch) - 26
-                print ch
+                ch = ord(ch) + 26
+                ch = chr(ch)
 
         # adds shifted character to empty string
         codedText += ch
