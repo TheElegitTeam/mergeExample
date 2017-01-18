@@ -3,7 +3,7 @@ def caesar(plaintext, offset):
     in the plaintext by a Caesar cipher by the specified shift.
     Non-letter characters should remain unchanged in the ciphertext.'''
 
-    ciphertext = ""
+    spywords = ""
 
     for ch in plaintext:
         # to shift uppercase letters
@@ -24,15 +24,15 @@ def caesar(plaintext, offset):
                 print ch
 
         # adds shifted character to empty string
-        ciphertext += ch
+        spywords += ch
 
-    return ciphertext
+    return spywords
 
 def main():
     message = raw_input('Enter a message: ')
-    shift = raw_input('Enter a non-negative integer: ')
+    shift = int(raw_input('Enter a non-negative integer: '))
 
     ciphertext = caesar(message, shift)
     print ciphertext
 
-print ciphertext
+main()
