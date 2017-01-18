@@ -1,4 +1,4 @@
-def quickSort(theList)
+def quickSort(theList):
     quickSortHelper(aList, 0, len(theList)
 
 def quickSortHelper(theList, start, end):
